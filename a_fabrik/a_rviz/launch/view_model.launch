@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="robot_namespace" default="/"/>
+  <arg name="hand" default="true" />
+
+  <param name="robot_description" command="$(find xacro)/xacro '$(find a_rviz)/urdf/model.urdf.xacro' robot_namespace:=$(arg robot_namespace) hand:=$(arg hand)"/>
+
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find a_rviz)/rviz/model.rviz" />
+  <!-- <node name="rviz" pkg="rviz" type="rviz"/>  -->
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+</launch>

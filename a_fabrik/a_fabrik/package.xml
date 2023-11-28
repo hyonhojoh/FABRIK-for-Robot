@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+    <name>a_fabrik</name>
+    <version>1.0.0</version>
+    <description>
+        This package provieds main of a_fabrik
+    </description>
+    <maintainer email="chohh7391@khu.ac.kr">Hyeonho Cho</maintainer>
+    <license>BSD</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <build_depend>eigen</build_depend>
+    <depend>pinocchio</depend>
+
+
+</package>
